@@ -11,8 +11,15 @@ protected:
 public:
 	File(std::string name);
 	File(path full_path);
+	void Set_name(std::string name);
 	void Set_path(path parent_path);
-	path Get_path();
+	path Get_fullpath();
+	std::string Get_name();
+	std::string Get_mode();
+	time_t Get_creation();
+	time_t Get_modification();
+	path Get_fullpath();
+	void print_info();
 	~File();
 };
 
