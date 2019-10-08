@@ -62,6 +62,8 @@ void Directory::addFile(std::vector<File*> files, File* file)
 			std::cout << "Enter the name of file: ";
 			std::cin >> name;
 			file->Set_name(name);
+			auto time = std::chrono::system_clock::now();
+			file->Set_modification(std::chrono::system_clock::to_time_t(time));
 		}
 		else
 			delete file;
