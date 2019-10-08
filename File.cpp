@@ -83,3 +83,8 @@ time_t File::Get_modification()
 {
 	return modification;
 }
+
+void File::Set_modification(time_t modification)
+{
+	this->modification = modification;
+}
